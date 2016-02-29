@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Main HTM page</title>
+    </h:head>
+    <h:body>
+        
+        <h2>Clubs</h2>
+        <p>
+            <ul>
+                <ui:repeat value="#{clubbean.allClubs}" var="club">
+                    <li>
+                        <h:link value="#{club.clubname}" outcome="club">
+                            <f:param name="id" value="#{club.teamid}" />
+                        </h:link>
+                    </li>
+                </ui:repeat>
+            </ul>
+        </p>
+        
+      
+     </h:body>
+</html>
+
